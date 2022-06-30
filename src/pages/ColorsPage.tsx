@@ -1,4 +1,3 @@
-import { endsWith } from "cypress/types/lodash";
 import React, { FC, useState } from "react";
 import styled from "styled-components";
 

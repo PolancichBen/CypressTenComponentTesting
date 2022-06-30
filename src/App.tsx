@@ -7,10 +7,6 @@ import LoginPage from "./pages/LoginPage";
 import ModalPage from "./pages/ModalPage";
 import ColorsPage from "./pages/ColorsPage";
 
-import HelloModal from "./components/molecules/modals/HelloModal";
-
-import { useModal } from "./hooks/UseModal";
-
 import "react-redux-toastr/lib/css/react-redux-toastr.min.css";
 import ReduxToastr from "react-redux-toastr";
 
@@ -25,8 +21,6 @@ const Container = styled.div`
 `;
 
 const App: FC = () => {
-  const [triggerModal, Modal] = useModal();
-
   return (
     <Container>
       <ReduxToastr
@@ -39,7 +33,6 @@ const App: FC = () => {
         progressBar
         closeOnToastrClick
       />
-      <Modal contents={HelloModal} requireResponse />
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<LandingPage />} />
