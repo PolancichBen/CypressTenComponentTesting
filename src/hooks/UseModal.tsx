@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Modal as ModalComponent } from '../components/molecules/Modal';
 
 export const useModal = (
-  props?: unknown
+  props?: typeof Object
 ): [() => void, (contents: any) => JSX.Element] => {
   const [isOpen, setIsOpen] = useState(false);
 
